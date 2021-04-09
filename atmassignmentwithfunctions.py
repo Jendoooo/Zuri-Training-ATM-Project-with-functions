@@ -15,7 +15,7 @@ def login():
     username = str(input("Please enter your Username: \n"))
     password = str(input("Please enter your password: \n"))
 
-    if(username in UserDatabase.keys()) and password in UserDatabase.values():
+    if username in UserDatabase.keys() and password in UserDatabase.values():
         print(UserDatabase.values())
         print(UserDatabase.keys())
         print("Time:  " + TimeDisplay.strftime("%Y-%m-%d %H:%M:%S"))
@@ -90,7 +90,6 @@ def main():
     if welcome == 1:
         # login()
         if login():
-            print("stuff = true")
             operation()
 
     elif welcome == 2:
